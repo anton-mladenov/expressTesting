@@ -1,10 +1,8 @@
 const express = require('express')
 const app = express()
-const smth = require("./firstModule.js");
+const printRouter = require("./firstModule.js");
 
-app.get('/', (req, res) => {
-  res.send(smth);
-});
+app.use("/", printRouter);
 
 app.listen(3000, () => {
   console.log('Example app listening on port 3000!');
